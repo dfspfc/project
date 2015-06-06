@@ -1,0 +1,26 @@
+<h3> Pesquisa de Empresa </h3>
+
+<?php if($this->messages): ?>
+	<p>
+		<?php echo $this->messages[0] ?>
+	</p>
+<?php else: 
+	$form = $this->form;
+	$form->setAttribute(
+		'action',
+		$this->url(
+			'lojista-pesquisa',
+			array(
+				'controller' => 'lojista',
+				'action' => 'pesquisa'
+			)
+		)
+	);
+	$form->prepare();
+
+	echo $this->form()->openTag($form);
+	echo $this->formRow($form->get('cnpj')) . '<br/>';
+	echo $this->formSubmit($form->get('submit')) . '<br/>';
+	echo $this->form()->closeTag();
+
+endif; ?>

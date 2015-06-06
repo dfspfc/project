@@ -1,0 +1,233 @@
+<?php if($this->messages): ?>
+	<p>
+		<?php echo $this->messages[0] ?>
+	</p>
+<?php endif; ?>
+
+<?php 
+$url = $this->url(
+	'lojista-cadastro',
+	array(
+		'controller' => 'lojista',
+		'action' => 'cadastro'
+	)
+)
+;?>
+
+<div class="corpo">
+	<div class="centro">		
+		<h1>Cadastro</h1>
+		<div class="menucad">
+			<ul>                                                                         
+				<li class="selecionado"><A HREF="cadastro.html">CADASTRO LOJISTA</A></li>
+				<li><a href="cadastrofornecedor.html">CADASTRO FORNECEDOR</a></li>
+			</ul>
+		</div>
+		<Br>
+		<br>
+		<br>
+		<br> 
+		O Cadastro é rápido e necessário apenas uma vez. <br>
+		<Br>
+		<form method="post" action="<?php echo  $url;?>">
+			<fieldset>
+				<legend color="#696969">Dados da Empresa</legend>
+				<table>
+					<Tr><br><br></tr>
+					<tr>			
+						<td width="16%" align="right">	Razão Social: </td>
+						<td width="34%" align="left">	<input type="text"  size="35" maxlength="30" id="razaoSocial" name="razaoSocial" /> </td>
+						<td width="16%" align="right">	CNPJ: </td>
+						<td width="34%" align="left">	<input name="cnpj" type="text" id="cnpj" size="35" maxlength="30" /> </td>
+					</tr>	
+					<tr>		
+						<td width="16%" align="right">		FANTASIA: </td>
+						<td width="34%" align="left">		<input name="nomeFantasia" type="text" id="nomeFantasia" size="35" maxlength="30" /></td>
+						<td width="16%" align="right">		DATA DE ABERTURA: </td>
+						<td width="34%" align="left">		<input name="abertura" type="text" id="abertura" size="35" maxlength="30" /><br></td>
+					</tr>
+					<Tr>
+						<td width="16%" align="right">		Inscrição Estadual: </td>
+						<td width="34%" align="left">		<input name="inscricaoEstadual" type="text" id="inscricaoEstadual" size="35" maxlength="30" /></td>
+					</tr>
+						<td width="16%" align="right">		Logradouro <br>(Rua, Av.): </td>
+						<td width="34%" align="left">		<input name="logradouro" type="text" id="logradouro" size="35" maxlength="30" /><br></td>
+						<td width="16%" align="right">		Número: </td>
+						<td width="34%" align="left">		<input name="numero" type="text" id="numero" size="7" maxlength="30" /></td>
+					</tr>
+					<tr>
+						<td width="16%" align="right">		Bairro:</td>
+						<td width="34%" align="left">		<input name="bairro" type="text" id="bairro" size="35" maxlength="30" /><br>				</td>
+						<td width="16%" align="right">		Cidade: </td>
+						<td width="34%" align="left">		<input name="cidade" type="text" id="cidade" size="35" maxlength="30" /></td>
+					</tr>
+					<Tr>
+						<td width="16%" align="right">		Estado: </td>
+						<td width="34%" align="left">		<input name="estado" type="text" id="estado" size="35" maxlength="30" /><br> </td>
+						<td width="16%" align="right">		CEP: </td>
+						<td width="34%" align="left">		<input name="cep" type="text" id="cep" size="35" maxlength="30" /></td>
+					</tr>
+					<tr>
+						<td width="16%" align="right">		Telefone 1: </td>
+						<td width="34%" align="left">		<input name="telefone[]" type="text" id="tel1" size="35" maxlength="30" /><br></td>
+						<td width="16%" align="right">		Telefone 2: </td>
+						<td width="34%" align="left">		<input name="telefone[]" type="text" id="tel2" size="35" maxlength="30" /></td>
+					</tr>
+					<Tr>				
+						<td width="16%" align="right">		Celular: </td>
+						<td width="34%" align="left">		<input name="celular[]" type="text" id="celular" size="35" maxlength="30" /><br></td>
+						<td width="16%" align="right">		Site:</td>
+						<td width="34%" align="left">		<input name="site" type="text" id="site" size="35" maxlength="30" /></td>
+					</tr>
+					<tr>
+						<td width="16%" align="right">		Email: </td>
+						<td width="34%" align="left">		<input name="email" type="text" id="email" size="35" maxlength="30" /><br></td>
+						<td width="16%" align="right">		Responsável: </td>
+						<td width="34%" align="left">		<input name="responsavel" type="text" id="responsavel" size="35" maxlength="30" /></td>
+					</tr>
+							
+				</table>
+			</fieldset>	
+				<br>
+			<fieldset>
+				<legend> Dados Bancários</legend>
+				<br>
+				Informe o(s) bancos em que a empresa possui contas:
+				<br>
+				<br>
+				<table >
+					<Tr>
+						<td align="right" width="15%">BANCO 1:</td>
+						<td align="left" width="28%"><input name="banco1" type="text" id="banco1" size="30" maxlength="25" /><br> </td>
+						<td align="right" width="10%">AGÊNCIA:</td>
+						<td align="left" width="17%"><input name="agencia1" type="text" id="agencia1" size="10" maxlength="9" /> <br> </td>
+						<td align="right" width="10%">TELEFONE:</td>
+						<td align="left" width="20%"><input name="telBanco1" type="text" id="telBanco1" size="15" maxlength="14" /> <br></td>
+					</tr>
+					<Tr>
+						<td align="right" width="15%">BANCO 2:</td>
+						<td align="left" width="28%"><input name="banco2" type="text" id="banco2" size="30" maxlength="25" /> </td>
+						<td align="right" width="10%">AGÊNCIA:</td>
+						<td align="left" width="17%"><input name="agencia2" type="text" id="agencia2" size="10" maxlength="9" /> </td>
+						<td align="right" width="10%">TELEFONE:</td>
+						<td align="left" width="20%"><input name="telBanco2" type="text" id="telBanco2" size="15" maxlength="14" /> <br> </td>
+					</tr>
+				</table>
+			</fieldset>
+				<br>
+			<fieldset>
+				<legend> Sócios</legend>
+				<br>
+				Digite o nome dos três principais participantes da sua empresa:
+				<br>
+				<br>
+				<table align="left" >
+					<Tr>
+						<td align="right" width="15%">Sócio 1:</td>
+						<td align="left" width="28%"><input name="socio1" type="text" id="user_socio1" size="30" maxlength="25" /> </td>
+						<td align="right" width="10%">Participação:</td>
+						<td align="left" width="17%"><input name="particip1" type="text" id="user_particip1" size="10" maxlength="9" /> </td>
+						<td align="right" width="10%">CPF:</td>
+						<td align="left" width="20%"><input name="cpf_socio1" type="text" id="user_cpf_socio1" size="15" maxlength="14" /> <br> </td>
+					</tr>
+					<Tr>
+						<td align="right" width="15%">Sócio 2:</td>
+						<td align="left" width="28%"><input name="socio2" type="text" id="user_socio2" size="30" maxlength="25" /> </td>
+						<td align="right" width="10%">Participação:</td>
+						<td align="left" width="17%"><input name="particip2" type="text" id="user_particip2" size="10" maxlength="9" /> </td>
+						<td align="right" width="10%">CPF:</td>
+						<td align="left" width="20%"><input name="cpf_socio2" type="text" id="user_cpf_socio2" size="15" maxlength="14" /> <br> </td>
+					</tr>
+					<Tr>
+						<td align="right" width="15%">Sócio 3:</td>
+						<td align="left" width="28%"><input name="socio3" type="text" id="user_socio3" size="30" maxlength="25" /> </td>
+						<td align="right" width="10%">Participação:</td>
+						<td align="left" width="17%"><input name="particip3" type="text" id="user_particip3" size="10" maxlength="9" /> </td>
+						<td align="right" width="10%">CPF:</td>
+						<td align="left" width="20%"><input name="cpf_socio3" type="text" id="user_cpf_socio3" size="15" maxlength="14" /> </td>
+					</tr>
+				</table>
+					
+			</fieldset>
+				<br>
+			<fieldset>
+				<legend> Compradores</legend>
+				<br>
+				Quem são os compradores de sua Empresa/Loja?
+				<br>
+				<br>
+				<table align="left">
+					<Tr>
+						<td align="right" width="15%">Comprador 1:</td>
+						<td align="left" width="28%"><input name="comprador1" type="text" id="user_comprador1" size="30" maxlength="25" /> </td>
+						<td align="right" width="10%">RG:</td>
+						<td align="left" width="17%"><input name="rg_comprador1" type="text" id="user_rg1" size="10" maxlength="9" /> </td>
+						<td align="right" width="10%">CPF:</td>
+						<td align="left" width="20%"><input name="cpf_comprador1" type="text" id="user_cpf_comprador1" size="15" maxlength="14" /> <br> </td>
+					</tr>
+					<Tr>
+						<td align="right" width="15%">Comprador 2:</td>
+						<td align="left" width="28%"><input name="comprador1" type="text" id="user_comprador1" size="30" maxlength="25" /> </td>
+						<td align="right" width="10%">RG:</td>
+						<td align="left" width="17%"><input name="rg_comprador1" type="text" id="user_rg1" size="10" maxlength="9" /> </td>
+						<td align="right" width="10%">CPF:</td>
+						<td align="left" width="20%"><input name="cpf_comprador1" type="text" id="user_cpf_comprador1" size="15" maxlength="14" /> <br> </td>
+					</tr>
+					<Tr>
+						<td align="right" width="15%">Comprador 3:</td>
+						<td align="left" width="28%"><input name="comprador1" type="text" id="user_comprador1" size="30" maxlength="25" /> </td>
+						<td align="right" width="10%">RG:</td>
+						<td align="left" width="17%"><input name="rg_comprador1" type="text" id="user_rg1" size="10" maxlength="9" /> </td>
+						<td align="right" width="10%">CPF:</td>
+						<td align="left" width="20%"><input name="cpf_comprador1" type="text" id="user_cpf_comprador1" size="15" maxlength="14" /> <br> </td>
+					</tr>
+				</table>
+					
+			</fieldset>
+				<br>
+			<fieldset>
+				<legend> Informações Comerciais</legend>
+				<br>
+				Onde pedemos pegar referências sobre suas últimas compras?
+				<br>
+				<br>
+				<table align="left" >
+					<Tr>
+						<td align="right" width="16%">FORNECEDOR 1:</td>
+						<td align="left" width="34%"><input name="fornecedor1" type="text" id="user_fornecedor1" size="30" maxlength="25" /> </td>
+						<td align="right" width="28%">TELEFONE:</td>
+						<td align="left" width="22%"><input name="tel_fornecedor1" type="text" id="user_tel_fornecedor1" size="18" maxlength="17" /> </td>
+					</tr>
+					<Tr>
+						<td align="right" width="16%">FORNECEDOR 2:</td>
+						<td align="left" width="34%"><input name="fornecedor2" type="text" id="user_fornecedor2" size="30" maxlength="25" /> </td>
+						<td align="right" width="28%">TELEFONE:</td>
+						<td align="left" width="22%"><input name="tel_fornecedor2" type="text" id="user_tel_fornecedor2" size="18" maxlength="17" /> </td>
+					</tr>
+					<Tr>
+						<td align="right" width="16%">FORNECEDOR 3:</td>
+						<td align="left" width="34%"><input name="fornecedor3" type="text" id="user_fornecedor3" size="30" maxlength="25" /> </td>
+						<td align="right" width="28%">TELEFONE:</td>
+						<td align="left" width="22%"><input name="tel_fornecedor3" type="text" id="user_tel_fornecedor3" size="18" maxlength="17" /> </td>
+					</tr>
+					<Tr>
+						<td align="right" width="16%">FORNECEDOR 4:</td>
+						<td align="left" width="34%"><input name="fornecedor4" type="text" id="user_fornecedor4" size="30" maxlength="25" /> </td>
+						<td align="right" width="28%">TELEFONE:</td>
+						<td align="left" width="22%"><input name="tel_fornecedor4" type="text" id="user_tel_fornecedor4" size="18" maxlength="17" /> </td>
+					</tr>
+					<Tr>
+						<td align="right" width="16%">FORNECEDOR 5:</td>
+						<td align="left" width="34%"><input name="fornecedor5" type="text" id="user_fornecedor5" size="30" maxlength="25" /> </td>
+						<td align="right" width="28%">TELEFONE:</td>
+						<td align="left" width="22%"><input name="tel_fornecedor5" type="text" id="user_tel_fornecedor5" size="18" maxlength="17" /> </td>
+					</tr>
+				</table>
+					
+			</fieldset>
+					<br><br>
+			<input type="checkbox" name="veracidade" value="1" /> Confirmo que as informações acima descritas são verdadeiras. <br><br>
+			 <input type="submit" name="enviar" value="Confirmar preenchimento" />
+		</form>
+	</div>
+</div>

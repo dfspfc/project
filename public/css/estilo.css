@@ -1,0 +1,210 @@
+body
+{
+	background:url(images/bg.gif) repeat #fefffe;
+	padding:0; font-size:14px;
+	margin:0px auto auto auto;
+	color:#36322b;
+	font-family: Lucida Sans;
+}
+
+#principal_container
+{
+	width:900px;
+	height:auto;
+	margin:0 auto;
+	padding:0px;
+
+}
+
+.Logo 
+{
+	width: 266px;
+	height: 200px;
+	background-color:#335699;
+	background-repeat:no-repeat;
+	float:left;
+	padding: 10px;
+}
+/*-----------------------Formatar login---------------------------*/
+.login
+{
+	width: 614px;
+	height: 150px;
+	background-image:url(../img/bg_login.png);
+	float:right;
+	text-align:bottom;
+	
+}
+
+.login .divlogin
+{
+	float:right;
+	height:110px;
+	width:240px;
+	padding:1%;
+}
+
+.login h1
+{
+	text-align:bottom;
+}
+input{
+border:1px #9dbbc6 solid;
+}
+
+/*---------------- menu tab----------------------*/
+.menu
+{
+	width: 594px;
+	height: 50px;
+	padding:10px;
+	background-image:url(../img/bg_menu.png);
+	float:right;
+}
+.menu ul
+{
+	list-style:none;
+	margin:0px;
+}
+.menu ul li
+{
+	display:inline;
+	border:0px;
+}
+.menu ul li a
+{
+	float:left;
+	height:42px;
+	border:none;
+	padding:0 15px 0 15px;
+	text-decoration:none;
+	color:#444;
+	line-height:42px;
+	font-size:17px;
+	font-family: Lucida Sans;
+}
+.menu ul li.selecionado a
+{
+	float:left;
+	height:42px;
+	border:none;
+	padding:0 15px 0 15px;
+	text-decoration:underline;
+	line-height:42px;
+	background-image:url(../img/bg_linkh.png);
+
+}
+.menu ul li a:hover
+{
+	background-image:url(../img/bg_link.png);
+}
+
+/*-------------------menu Cadastro-----------------------------*/
+.menucad
+{
+	width: 674px;
+	height: 30px;
+	padding:10px 10px 10px 180px;
+	background-image:url(../img/bg_menucad.png);
+	float:right;
+}
+.menucad ul
+{
+	list-style:none;
+	margin:0px;
+
+}
+.menucad ul li
+{
+	display:inline;
+	border:0px;
+
+}
+.menucad ul li a
+{
+	float:left;
+	height:42px;
+	border:none;
+	padding:0 15px 0 15px;
+	text-decoration:none;
+	
+	color:#fff;
+	line-height:42px;
+	font-size:17px;
+	font-family: Lucida Sans;
+}
+.menucad ul li.selecionado a
+{
+	float:left;
+	height:42px;
+	border:none;
+	padding:0 15px 0 15px;
+
+	line-height:42px;
+	background-image:url(../img/bg_linkh.png);
+	color:#00008b;
+
+}
+.menucad ul li a:hover
+{
+	background-image:url(../img/bg_link.png);
+}
+
+/*------------------------- Formatação Corpo ----------------------*/
+.corpo
+{
+	width: 100%;
+	height: auto;
+	min-height:400px;
+	background-color:#eaeaea;
+	background-repeat:no-repeat;
+	float:left;
+
+}
+
+/*.corpo input
+{
+ border-color:#aeaeae;
+ border-style: solid;
+}
+*/
+.corpo h1 
+{
+	background-image:url(../img/bg_titulo.png);
+}
+
+.corpo p 
+{
+	text-align:justify;
+	padding:0px 10px 0px 10px ;
+	font-size: 14px;
+}
+.centro
+{
+	
+	width:96%;
+	padding:2%;
+	float:right;
+}
+
+.centro table 
+{
+		width:820px;
+		border:0;
+}
+.paragrafo
+{
+	text-indent:50px;
+}
+/*--------------------------------------------------------------------*/
+.rodape
+{
+	width: 100%;
+	min-height: 80px;
+	height:auto;
+	background-color:#c3d5ef;
+	background-repeat:no-repeat;
+	float:left;
+	text-align:center;
+
+}

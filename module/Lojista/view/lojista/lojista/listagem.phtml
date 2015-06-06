@@ -1,0 +1,20 @@
+<h1>Relatorio do Lojista</h1>
+<br />
+
+<table class="table">
+    <tr>
+        <th>Razão Social</th>
+        <th>Nome Fantasia</th>
+        <th>Inscricão Estadual</th>
+        <th>CNPJ</th>
+        <th>Data de Abertura</th>
+    </tr>
+    <tr>
+        <td><?php echo $lojista->getRazaoSocial(); ?></td>
+        <td><?php echo $lojista->getNomeFantasia(); ?></td>
+        <td><?php echo $lojista->getInscricaoEstadual(); ?></td>
+        <td><?php echo $lojista->getCnpj(); ?></td>
+        <td><?php echo $lojista->getAbertura(); ?></td>    
+    </tr>
+</table>
+<br />

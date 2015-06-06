@@ -1,0 +1,75 @@
+<?php echo $this->doctype(); ?>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <?php echo $this->headTitle('AVALIZZA Consultoria - Início')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php echo $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php echo $this->headLink()
+                ->prependStylesheet($this->basePath('css/estilo.css'))
+        ?>
+
+        <!-- Scripts -->
+        <?php echo $this->headScript()
+            ->prependFile($this->basePath('js/bootstrap.min.js'))
+            ->prependFile($this->basePath('js/jquery.min.js'))
+            ->prependFile($this->basePath('js/respond.min.js'), 'text/javascript', array('conditional' => 'lt IE 9',))
+            ->prependFile($this->basePath('js/html5shiv.js'),   'text/javascript', array('conditional' => 'lt IE 9',))
+        ; ?>
+
+    </head>
+    <body>
+        <div id="principal_container" >
+            <div id="cabeçalho">
+                <div class="Logo"> <img src="<?php echo $this->basePath('img/logo.png') ?>" alt="Avalizza" /> </div>
+            </div>
+            <div class="login" >
+                <div class="divlogin">
+                    <H3 align="center">LOGIN</h3>
+                    <form name="login" method="post" action="validaLogin.php">
+                        <table>
+                            <tr>
+                                <td> Usuário: </td>
+                                <td> <Input type="text" name="login" size="20" maxlength="18"></input> </td>                            
+                            </tr>
+                            <tr>
+                                <td> Senha: </td>
+                                <td> <Input type="text" name="login" size="20" maxlength="18"></input> </td>                            
+                            </tr>                           
+                            <tr>
+                                <td colspan="2" align="right"><input class="login2" type="submit" value="Entrar" name="btn_login" align="right"></input></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <Br><br><br><br><br><Br>
+                <h1>Consultoria de Crédito</h1>
+            </div>
+            <div class="menu">
+                <ul>                                                                         
+                <li class="selecionado"><a href="<?php echo $this->url('home')?>">HOME</a></li>
+                <li><a href="<?php echo $this->url('sobre')?>">SOBRE</a></li>
+                <li><a href="<?php echo $this->url('servicos')?>">SERVIÇOS</a></li>
+                <li><a href="<?php echo $this->url('contato')?>">CONTATO</a></li>
+                <li><a href="<?php echo $this->url('lojista-cadastro')?>">CADASTRO</a></li>
+            </ul>
+            </div>
+            <div class="container">
+                <?php echo $this->content; ?>
+            <hr>
+            <footer>
+                <div class="rodape">
+                    <h4>AVALIZZA - Centro de Apoio Comercial</h4>
+                    <h5>Vila Menk - Carapicuíba</h5>    
+                </div>
+            </footer>
+        </div> <!-- /container -->
+        <?php echo $this->inlineScript() ?>
+    </body>
+</html>
