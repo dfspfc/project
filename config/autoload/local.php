@@ -5,7 +5,7 @@ return array(
         'root' => array(
             'driver'    => 'Pdo',
             'username'  => 'root',
-            'password'  => '',
+            'password'  => 'daniel',
             'dsn'       => 'mysql:dbname=avalizza;host=localhost',
             'driver_options' => array(
                 PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''

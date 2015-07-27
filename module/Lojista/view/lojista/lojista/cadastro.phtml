@@ -11,8 +11,8 @@ $url = $this->url(
 		'controller' => 'lojista',
 		'action' => 'cadastro'
 	)
-)
-;?>
+);
+?>
 
 <div class="corpo">
 	<div class="centro">		
@@ -20,7 +20,7 @@ $url = $this->url(
 		<div class="menucad">
 			<ul>                                                                         
 				<li class="selecionado"><A HREF="cadastro.html">CADASTRO LOJISTA</A></li>
-				<li><a href="cadastrofornecedor.html">CADASTRO FORNECEDOR</a></li>
+				<li><a href="<?php echo $this->url('lojista-pesquisa')?>">CADASTRO FORNECEDOR</a></li>
 			</ul>
 		</div>
 		<Br>
@@ -89,7 +89,7 @@ $url = $this->url(
 				</table>
 			</fieldset>	
 				<br>
-			<fieldset>
+			<!--<fieldset>
 				<legend> Dados Bancários</legend>
 				<br>
 				Informe o(s) bancos em que a empresa possui contas:
@@ -149,7 +149,7 @@ $url = $this->url(
 				</table>
 					
 			</fieldset>
-				<br>
+				<br>-->
 			<fieldset>
 				<legend> Compradores</legend>
 				<br>
@@ -194,33 +194,33 @@ $url = $this->url(
 				<table align="left" >
 					<Tr>
 						<td align="right" width="16%">FORNECEDOR 1:</td>
-						<td align="left" width="34%"><input name="fornecedor1" type="text" id="user_fornecedor1" size="30" maxlength="25" /> </td>
+						<td align="left" width="34%"><input name="fornecedor1" type="text" id="fornecedor1" size="30" maxlength="25" /> </td>
 						<td align="right" width="28%">TELEFONE:</td>
-						<td align="left" width="22%"><input name="tel_fornecedor1" type="text" id="user_tel_fornecedor1" size="18" maxlength="17" /> </td>
+						<td align="left" width="22%"><input name="telefoneFornecedor1" type="text" id="telefoneFornecedor1" size="18" maxlength="17" /> </td>
 					</tr>
 					<Tr>
 						<td align="right" width="16%">FORNECEDOR 2:</td>
-						<td align="left" width="34%"><input name="fornecedor2" type="text" id="user_fornecedor2" size="30" maxlength="25" /> </td>
+						<td align="left" width="34%"><input name="fornecedor2" type="text" id="fornecedor2" size="30" maxlength="25" /> </td>
 						<td align="right" width="28%">TELEFONE:</td>
-						<td align="left" width="22%"><input name="tel_fornecedor2" type="text" id="user_tel_fornecedor2" size="18" maxlength="17" /> </td>
+						<td align="left" width="22%"><input name="telefoneFornecedor2" type="text" id="telefoneFornecedor2" size="18" maxlength="17" /> </td>
 					</tr>
 					<Tr>
 						<td align="right" width="16%">FORNECEDOR 3:</td>
-						<td align="left" width="34%"><input name="fornecedor3" type="text" id="user_fornecedor3" size="30" maxlength="25" /> </td>
+						<td align="left" width="34%"><input name="fornecedor3" type="text" id="fornecedor3" size="30" maxlength="25" /> </td>
 						<td align="right" width="28%">TELEFONE:</td>
-						<td align="left" width="22%"><input name="tel_fornecedor3" type="text" id="user_tel_fornecedor3" size="18" maxlength="17" /> </td>
+						<td align="left" width="22%"><input name="telefoneFornecedor3" type="text" id="telefoneFornecedor3" size="18" maxlength="17" /> </td>
 					</tr>
 					<Tr>
 						<td align="right" width="16%">FORNECEDOR 4:</td>
-						<td align="left" width="34%"><input name="fornecedor4" type="text" id="user_fornecedor4" size="30" maxlength="25" /> </td>
+						<td align="left" width="34%"><input name="fornecedor4" type="text" id="fornecedor4" size="30" maxlength="25" /> </td>
 						<td align="right" width="28%">TELEFONE:</td>
-						<td align="left" width="22%"><input name="tel_fornecedor4" type="text" id="user_tel_fornecedor4" size="18" maxlength="17" /> </td>
+						<td align="left" width="22%"><input name="telefoneFornecedor4" type="text" id="telefoneFornecedor4" size="18" maxlength="17" /> </td>
 					</tr>
 					<Tr>
 						<td align="right" width="16%">FORNECEDOR 5:</td>
-						<td align="left" width="34%"><input name="fornecedor5" type="text" id="user_fornecedor5" size="30" maxlength="25" /> </td>
+						<td align="left" width="34%"><input name="fornecedor5" type="text" id="fornecedor5" size="30" maxlength="25" /> </td>
 						<td align="right" width="28%">TELEFONE:</td>
-						<td align="left" width="22%"><input name="tel_fornecedor5" type="text" id="user_tel_fornecedor5" size="18" maxlength="17" /> </td>
+						<td align="left" width="22%"><input name="telefoneFornecedor5" type="text" id="telefoneFornecedor5" size="18" maxlength="17" /> </td>
 					</tr>
 				</table>
 					

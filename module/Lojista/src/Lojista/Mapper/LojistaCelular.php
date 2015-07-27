@@ -3,7 +3,6 @@
 namespace Lojista\Mapper;
 
 use ZfcBase\Mapper\AbstractDbMapper;
-
 use Lojista\Entity\LojistaCelular as LojistaCelularEntity;
 
 class LojistaCelular extends AbstractDbMapper

@@ -13,7 +13,7 @@ class LojistaTelefone implements ServiceManagerAwareInterface
 		$lojistaTelefoneEntity = new LojistaTelefoneEntity();
 
 		foreach ($data['telefone'] as $value) {
-
+			
 			$lojistaTelefoneEntity
 				->setTelefone($value)
 				->setLojistaId($lojistaId);

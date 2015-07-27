@@ -33,14 +33,15 @@ class Module
                 'Lojista\Service\Lojista' => 'Lojista\Service\Lojista',
                 'Lojista\Service\LojistaEndereco' => 'Lojista\Service\LojistaEndereco',
                 'Lojista\Service\LojistaTelefone' => 'Lojista\Service\LojistaTelefone',
-                'Lojista\Service\LojistaCelular' => 'Lojista\Service\LojistaCelular         ',
+                'Lojista\Service\LojistaCelular' => 'Lojista\Service\LojistaCelular',
+                'Lojista\Service\LojistaFornecedor' => 'Lojista\Service\LojistaFornecedor',
                 'Lojista\Service\FlashMessenger' => 'Lojista\Service\FlashMessenger'
             ),
             'factories' => array(
                 'Lojista\Mapper\Lojista' =>
                 function ($sm) {
                     $dbConfig = $sm->get('Configuration');
-
+                    
                     $mapper = new \Lojista\Mapper\Lojista();
 
                     return $mapper->setDbAdapter(
@@ -99,6 +100,22 @@ class Module
                     )
                     ->setHydrator(
                         new \Lojista\Mapper\Hydrator\LojistaCelular()
+                    );
+                },
+                'Lojista\Mapper\LojistaFornecedor' =>
+                function ($sm) {
+                    $dbConfig = $sm->get('Configuration');
+                    
+                    $mapper = new \Lojista\Mapper\LojistaFornecedor();
+
+                    return $mapper->setDbAdapter(
+                        new \Zend\Db\Adapter\Adapter($dbConfig['db']['root'])
+                    )
+                    ->setEntityPrototype(
+                        new \Lojista\Entity\LojistaFornecedor()
+                    )
+                    ->setHydrator(
+                        new \Lojista\Mapper\Hydrator\LojistaFornecedor()
                     );
                 }
             ),

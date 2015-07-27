@@ -8,7 +8,6 @@
         "zf-commons/zfc-twig": "*"
     },
     "require-dev": {
-        "ext-xdebug": "*",
         "phpunit/phpunit": "*",
         "pdepend/pdepend": "*",
         "sebastian/phpcpd": "*",

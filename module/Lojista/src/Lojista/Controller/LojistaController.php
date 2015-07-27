@@ -16,6 +16,7 @@ class LojistaController extends AbstractActionController
     private $lojistaEnderecoService;
     private $lojistaTelefoneService;
     private $lojistaCelularService;
+    private $lojistaFornecedorService;
     private $flashMessengerService;
 
     public function cadastroAction()
@@ -28,7 +29,7 @@ class LojistaController extends AbstractActionController
             $inserted  = $this->getLojistaService()->save(
                 $request->getPost()->toArray()
             );
-
+            //var_dump($inserted); die;
             $lojistaId = $inserted->getGeneratedValue();
             if($lojistaId) {
                 $this->getLojistaEnderecoService()->save(
@@ -44,7 +45,12 @@ class LojistaController extends AbstractActionController
                 $this->getLojistaCelularService()->save(
                     $request->getPost()->toArray(),
                     $lojistaId
-                );    
+                );
+
+                $this->getLojistaFornecedorService()->save(
+                    $request->getPost()->toArray(),
+                    $lojistaId
+                );
             }
 
             //var_dump($lojistaId); die;
@@ -136,6 +142,14 @@ class LojistaController extends AbstractActionController
             $this->lojistaCelularService = $this->getServiceLocator()->get('Lojista\Service\lojistaCelular');
         }
         return $this->lojistaCelularService;
+    }
+
+    private function getLojistaFornecedorService()
+    {
+        if(null === $this->lojistaFornecedorService) {
+            $this->lojistaFornecedorService = $this->getServiceLocator()->get('Lojista\Service\LojistaFornecedor');
+        }
+        return $this->lojistaFornecedorService;
     }
 
     private function getFlashMessengerService()

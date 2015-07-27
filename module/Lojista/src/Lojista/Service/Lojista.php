@@ -27,7 +27,7 @@ class Lojista implements ServiceManagerAwareInterface
 			->setCnpj($data['responsavel'])
 			->setCnpj($data['email'])
 			->setCnpj($data['site']);
-
+			
 		return $this->getServiceManager()
 			->get('Lojista\Mapper\Lojista')
 			->save($lojistaEntity);
